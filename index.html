@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Link Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section with Profile Picture and Personal Info-->
+       <!-- Profile Picture Upload -->
+       <input type="file" id="profile-picture-upload" accept="image/*" aria-label="Upload Profile Picture">
+       <img id="profile-img" src="img.png" alt="Profile Picture" class="profile-img">
+        <header>
+            <div class="profile">
+                <div class="personal-info">
+                    <h2>Personal Information</h2>
+                    <p id="name" contenteditable="true">Azra Shafi Ullah</p>
+                    <p id="contact-email" contenteditable="true">hye.doe@email.com</p>
+                    <p id="contact-phone" contenteditable="true">Phone: +92 234 567 890</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Resume Sections -->
+        <section id="education" class="section" contenteditable="true">
+            <h2>Education</h2>
+            <p>Bachelor - XYZ University (2024)</p>
+            <p>Intermediate - XYZ University (2024)</p>
+            <p>Matriculation - XYZ School (2024)</p>
+        </section>
+        <section id="skills" class="section" contenteditable="true">
+            <h2>Skills</h2>
+            <p>TypeScript, CSS, JavaScript, Next.js & React, Tailwind CSS</p>
+        </section>
+        <section id="experience" class="section" contenteditable="true">
+            <h2>Work Experience</h2>
+            <p>Web Developer - ABC Tech (2024-Present)</p>
+        </section>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="change-background">Change Background</button>
+            <button id="change-font">Change Font</button>
+            <button id="download-resume">Download Resume</button>
+            <button id="share-link">Share Resume Link</button>
+        </div>        
+        <div id="unique-url" style="display:none;">
+            <p>Your unique resume URL: <span id="resume-url"></span></p>
+        </div>
+    </div>
+    
+    <!-- Include jsPDF from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
